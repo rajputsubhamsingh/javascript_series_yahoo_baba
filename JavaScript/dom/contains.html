@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        #test{
+            width: 100%;
+            background-color: rgb(206, 206, 9);
+            border: .5px solid black;
+            margin: 20px auto;
+            padding: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="test">
+        <h2>Yahoo Baba : JavaScript Contains Method</h2>
+        <p id="abc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto omnis commodi, iure maiores assumenda ipsa tempore eius nemo ratione facere.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, suscipit.</p>
+    </div>
+
+    <script>
+        var parentElement =  document.getElementById('test');
+        var target = document.getElementById('abc');
+
+        //this method return only true and false value.
+        //if target id is present in our html then return true otherwise false.
+        var find = parentElement.contains(target);
+
+        console.log(find);
+    </script>
+</body>
+</html>

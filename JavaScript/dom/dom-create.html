@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1 style="color : red">Yahoo Baba : DOM create methods</h1>
+    <div id="test">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, veniam?</p>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+    </div>
+    <script>
+        var newElement = document.createElement('h1');
+        var newText = document.createTextNode("This is new text.")
+        var newComment = document.createComment("this is comment.");
+        console.log(newElement);
+        console.log(newText);
+        console.log(newComment);
+
+
+        //apendChild method
+
+        // newElement.appendChild(newText);
+        // document.getElementById('test').appendChild(newElement); 
+
+        //insertBefore method
+        var target = document.getElementById('test');
+        target.insertBefore(newElement,target.childNodes[0]);
+    </script>
+</body>
+</html>

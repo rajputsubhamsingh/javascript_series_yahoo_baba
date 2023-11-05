@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #box{
+            overflow: auto;
+            background: pink;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        #inner-box{
+            background: lightgreen;
+            width: 1000px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h2>JavaScript : scrollTop & scrollLeft</h2>
+    <div id="box">
+        <div id="inner-box"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sint fugit maxime, placeat numquam eius enim ullam cum aliquam minima obcaecati exercitationem voluptatem repellat optio itaque assumenda tenetur! Quaerat quia voluptatibus laborum tempora, voluptas tenetur aperiam distinctio vel aliquid modi natus reiciendis ipsam vero eius alias sequi recusandae cupiditate repellat! Laboriosam doloribus reiciendis libero possimus, non et ex quisquam. Quisquam quod iste suscipit aspernatur rem aperiam dolorum commodi, dicta repellendus architecto quae nihil iusto, adipisci harum pariatur dolorem debitis inventore nulla at fugiat? Natus voluptatibus esse expedita. Temporibus nesciunt unde omnis quam, doloremque facere hic accusantium atque maxime esse eum provident recusandae, iste, laboriosam excepturi nam debitis aut! Quaerat ipsam assumenda aliquid in eligendi sed natus, consequuntur culpa! Rem velit delectus vel animi quibusdam sapiente ut eos veniam. Laudantium earum officia laboriosam a architecto doloremque tempore iure nam amet nulla! Esse voluptatem a odit voluptatibus fugit reprehenderit, quo provident officia porro doloremque cupiditate, eum alias cum quos explicabo, blanditiis officiis inventore repellendus sint laudantium expedita maiores non. Et suscipit voluptates ea maxime expedita nemo nam quasi doloribus qui cum. Cumque reprehenderit repellendus repellat animi veniam obcaecati beatae aliquam delectus! Quos sapiente ex quibusdam similique rerum nobis officia alias aspernatur officiis. Voluptatem asperiores reprehenderit beatae ducimus ipsa, doloremque tempore totam incidunt eum? Iusto qui, tenetur suscipit odio vero sint voluptates at porro fugiat blanditiis ducimus similique ea obcaecati, sit optio. Aliquam minus aliquid accusantium sed quidem quo, dolore reiciendis ipsa quaerat quod ipsam, deserunt molestiae dolor, officiis similique quae facilis assumenda consequatur facere itaque. Mollitia voluptate unde vitae expedita itaque cupiditate nihil eligendi quisquam sequi nemo! Magnam, facere similique odio nam reprehenderit dicta reiciendis quia dolore a deserunt ullam doloremque, quisquam, repellat eligendi sunt tenetur alias voluptates quasi optio asperiores dolorem. Necessitatibus aspernatur quia assumenda eveniet laboriosam, ratione repellat ex reiciendis exercitationem quos incidunt impedit temporibus, laborum animi excepturi dicta saepe suscipit rerum debitis. Autem accusantium eligendi pariatur omnis? Ea quaerat dolorem minus officia libero, voluptatem, similique illum numquam eos, doloribus saepe reprehenderit! Mollitia iusto assumenda omnis dicta eveniet reprehenderit, impedit, et rerum ratione, laborum voluptatem deserunt aliquam? Velit maiores doloribus commodi ducimus cum qui nemo laborum quidem dolores nobis, optio recusandae laboriosam eaque, sint eveniet eligendi deserunt. Voluptates nostrum numquam, accusantium consequuntur pariatur vero quibusdam architecto, aperiam molestiae ullam illo assumenda a eos dolorem suscipit laborum. Exercitationem vel, culpa, explicabo, maiores temporibus laborum eveniet itaque voluptatum reprehenderit deserunt recusandae corrupti facilis quia quis eius ab blanditiis! Et tempore natus explicabo magnam dolores ducimus harum, ipsam optio reprehenderit placeat voluptatum unde dignissimos esse, voluptatem, perferendis veniam aperiam dolore commodi beatae. Saepe maxime rerum quae repellat pariatur quibusdam ipsum enim. Corrupti vitae suscipit eveniet ut sint voluptatum nostrum doloremque cupiditate, deserunt iure illum cum dolorem assumenda consectetur sunt distinctio nam enim vero saepe nisi recusandae similique nemo animi. Voluptate harum assumenda illo facilis numquam placeat possimus sint earum. Maxime at illum vero deleniti pariatur optio dolore ullam consequatur quam inventore, repellat rerum neque beatae itaque perferendis amet earum non eveniet commodi alias.</p>
+    </div>
+    <script>
+        const box = document.querySelector('#box');
+        box.addEventListener('scroll', () => {
+            console.clear();
+            console.log('scrollTop : ' + box.scrollTop);
+            console.log('scrollLeft : ' + box.scrollLeft);
+        });
+    </script>
+</body>
+</html>

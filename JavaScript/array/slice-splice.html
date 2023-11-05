@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice-Splice</title>
+</head>
+<script>
+    // var arr = ["pawan","aara","singh","tridev"]; 
+    // document.write(arr + "<br><br>");
+    // var b = arr.slice(1,3);           //here we pass two index that is starting and ending index and it can create a new sub string
+    // document.write(b + "<br><br>"); 
+
+    var arr = ["pawan","aara","singh","tridev"]; 
+    document.write(arr + "<br><br>");
+    //it changing in existing array
+    //1.is for starting index , 2.is for howmany element you want to delete
+    //3.is for adding new element 
+    var b = arr.splice(2,0,"neha","kriti");            
+    document.write(arr + "<br><br>"); 
+    //here we pass 4 then four element is deleted than adding two element
+    var c = arr.splice(2,4,"priti","pooja");            
+    document.write(arr + "<br><br>"); 
+</script>
+<body>
+    
+</body>
+</html>

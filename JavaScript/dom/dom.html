@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        /* apply some basic styles to the page */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* style the header */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+#header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* style the menu */
+#menu {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#menu li {
+  display: inline-block;
+  margin-right: 10px;
+}
+#menu li a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+#menu li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* style the content */
+.content {
+  padding: 10px;
+  margin: 10px 0;
+}
+.content h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.content img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+}
+.content p {
+  line-height: 1.5;
+  margin: 0 0 10px 0;
+}
+#list {
+  list-style: square inside;
+  margin: 0;
+  padding: 0;
+}
+#list li {
+  margin-bottom: 5px;
+}
+
+/* style the sidebar */ 
+#sidebar {
+  position: absolute;
+  top: 100px; /* adjust the top value based on the height of your navbar */
+  right: 0;
+  width: 200px; /* adjust the width as needed */
+  bottom: 0; /* this will stretch the sidebar to the bottom of the page */
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.content {
+  margin-right: 220px; /* adjust the margin to create space for the sidebar */
+}
+  
+#sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#sidebar li {
+  margin-bottom: 5px;
+}
+#sidebar li a {
+  color: #333;
+  text-decoration: none;
+}
+#sidebar li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* style the footer */
+#footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.done{
+    background-color:rgb(0, 128, 0); 
+}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header" class="header">
+            <h1>Yahoo Baba</h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>Sub Heading</h2>
+            <img src="1.jpg" alt="" width="200px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quae sit rem omnis nesciunt, dicta est quisquam quia possimus repellat architecto recusandae sunt, praesentium voluptatum, voluptates inventore accusantium! Cum, ipsum?</p>
+
+
+            <ul id="list">
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+            </ul>
+        </div>
+        <div id="sidebar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+        <div id="footer">
+            singhsubham841438@gmail.com
+        </div>
+    </div>
+
+
+    <script>
+        // document.getElementById('header').addEventListener('click', abc);
+
+        // function abc(){  
+        //     document.getElementById('header').classList.toggle('abc');
+        // } 
+        
+        document.getElementById('header').addEventListener(
+                "click",
+                function() {
+                    this.classList.toggle("done");
+                }
+            );
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tabs</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background: #e7e7e7;
+        }
+        .tab{
+            width: 500px;
+            overflow: hidden; 
+        }
+        .tab button {
+            background: #90caf8;
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s;
+        }
+        .tab button:hover {
+            background: #74aedd;
+        }
+        .tab button.active {
+            background: #fff;
+        }
+
+        .tabContent {
+            background: #fff;
+            width: 500px;
+            padding: 12px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            line-height: 21px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks" data-tab = "tab1">Tab1</button>
+        <button class="tablinks" data-tab = "tab2">Tab2</button>
+        <button class="tablinks" data-tab = "tab3">Tab3</button>
+    </div>
+    <div id="tab1" class="tabContent">
+        <h2>Tab 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ullam sequi est blanditiis repudiandae tenetur quaerat adipisci? Facere numquam a, provident, voluptas non nulla aspernatur fugit rem voluptatibus dolorum vel.</p>
+    </div>
+    <div id="tab2" class="tabContent">
+        <h2>Tab 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ullam sequi est blanditiis repudiandae tenetur quaerat adipisci? Facere numquam a, provident, voluptas non nulla aspernatur fugit rem voluptatibus dolorum vel.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, ipsa!</p>
+    </div>
+    <div id="tab3" class="tabContent">
+        <h2>Tab 3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt numquam ullam nisi ducimus, ipsum quibusdam quisquam laudantium blanditiis accusantium quia?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ullam sequi est blanditiis repudiandae tenetur quaerat adipisci? Facere numquam a, provident, voluptas non nulla aspernatur fugit rem voluptatibus dolorum vel.</p>
+    </div>
+
+    <script>
+        const tabBtn = document.querySelectorAll('.tablinks');
+
+        for (var i = 0; i < tabBtn.length; i++) {
+            tabBtn[i].addEventListener('click', function() {
+                var tabName = this.dataset.tab;
+                var tabContent = document.getElementById(tabName); 
+                
+                var allTabContent = document.querySelectorAll('.tabContent');
+                var allTabButtons = document.querySelectorAll('.tablinks');
+
+                for(var j=0;j<allTabContent.length;j++){
+                    allTabContent[j].style.display = 'none';
+                }
+
+                for(var j=0;j<allTabContent.length;j++){
+                    allTabButtons[j].classList.remove('active');
+                }
+
+
+                tabContent.style.display = 'block';
+                this.classList.add('active');
+            });
+        }
+        document.querySelector('.tablinks').click();
+    </script>
+</body>
+</html>

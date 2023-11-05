@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch - Advance JavaScript</title>
+</head>
+<body>
+
+
+    <script>
+        // fetch('content/readme.txt')
+        // .then((response) => {
+        //     return response.text();
+        // })
+        // .then((data) => {
+        //     // console.log(data);
+        //     document.write(data);
+        // });
+
+        // same code in another way
+
+        // fetch('content/readme.txt')
+        // .then((response) => response.text())
+        // .then((data) => document.write(data));
+
+        // next way to write this
+        // fetch('content/readme.txt')
+        // .then(response => response.text())
+        // .then(data => document.write(data));
+
+        
+
+        // taking fake json data 
+
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())  // here we replace text() -> json() 
+        .then(data => {
+            console.log(data)
+            for(var x in data){
+                // document.write(x + " ")
+                // document.write(data[x].title + " ")
+                var a = `${data[x].name} - ${data[x].email} - ${data[x].address.city}<br>`;
+                document.write(a)
+            }
+        })
+        .catch(error => console.log(error));
+    </script>
+    
+</body>
+</html>

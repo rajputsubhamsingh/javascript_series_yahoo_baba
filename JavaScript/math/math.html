@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+        //it return the upper value
+        var a = Math.ceil(2.3);
+        // it return the lower value
+        var a = Math.floor(2.3);
+
+        // if the Number is then .5 it take lower value else greater then .5 then take upper value
+        var a = Math.round(2.2);
+
+        //it always return the interger value not pointable value
+        var a = Math.trunc(5.3);
+
+        document.write(a);
+
+
+        //it find maximum value
+        var b = Math.max(2,5,34,3,54,4);
+        //it find minimum value
+        var b = Math.min(2,5,34,3,54,4);
+        document.write("<br>"+b);
+
+        //it find sqrt
+        var c = Math.sqrt(25);
+        document.write("<br> sqrt is "+c);
+
+        //it find cbrt
+        var d = Math.cbrt(125);
+        document.write("<br> cbrt is "+d);
+
+        //it find power
+        var e = Math.pow(4,2);
+        document.write("<br> power is "+e);
+
+        //it generate a random value into 0 to 1
+        //it also generate random value in a particular bond
+        // var f = Math.random(); // generate the value in 0 to 1
+        var f = Math.floor(Math.random()*10 + 1); //it return the value into 1 to 10.ss
+        document.write("<br>"+f);
+
+        //it return absolute value
+        var g = Math.abs(-5.25);
+        document.write("<br> abs is : "+g);
+
+        document.write("<br> Math PI function is return the value of PI : " + Math.PI.toFixed(2));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

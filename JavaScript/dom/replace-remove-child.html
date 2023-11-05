@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Orange</li>
+        <li>Mango</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+        <li>Apple</li>
+    </ul>
+    <script>
+        // var newElement =  document.createElement('li');
+        // var newText = document.createTextNode('Wow, new text');
+
+        // newElement.appendChild(newText);
+        // var target = document.getElementById('list');
+        // var oldElement = target.children[1];
+
+        // target.replaceChild(newElement, oldElement);
+
+
+        var target = document.getElementById('list');
+        var oldElement = target.children[0];
+
+        target.removeChild(oldElement);
+    </script>
+</body>
+</html>
